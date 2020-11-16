@@ -1,0 +1,18 @@
+table {
+    width: 60%;
+    margin: 80px 0 0 200px;
+  }
+
+  *{
+    outline: none;
+  }
+  
+td{
+  cursor: pointer;
+}
+.spinner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}

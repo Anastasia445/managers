@@ -1,0 +1,451 @@
+<mat-card>
+    <mat-card>
+        Менеджер №n
+    </mat-card>
+    <br>
+<div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <!-- Id Column -->
+      <ng-container matColumnDef="idEmployee">
+        <th mat-header-cell *matHeaderCellDef> <strong>No.</strong> </th>
+        <td  mat-cell *matCellDef="let element"> {{element.idEmployee}} </td>
+      </ng-container>
+    
+      <!-- Name Column -->
+      <ng-container matColumnDef="lname">
+        <th class="n" mat-header-cell *matHeaderCellDef> <strong>Фамилия</strong> </th>
+        <td class="n" mat-cell *matCellDef="let element"> {{element.lname}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="fname">
+        <th class="n" mat-header-cell *matHeaderCellDef> <strong>Имя</strong> </th>
+        <td class="n" mat-cell *matCellDef="let element"> {{element.fname}} </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="patronymic">
+        <th class="n" mat-header-cell *matHeaderCellDef> <strong>Отчество</strong> </th>
+        <td class="n" mat-cell *matCellDef="let element"> {{element.patronymic}} </td>
+      </ng-container>
+<!--
+      <ng-container matColumnDef="dates">
+        <th mat-header-cell *matHeaderCellDef  class="title"> <strong>Дата</strong> </th>
+        <td mat-cell *matCellDef="let element" class="cells"> 
+         
+          <mat-checkbox *ngFor="let element of days"  color="primary" [value]="days" class="example-margin"></mat-checkbox>
+
+        </td>
+      </ng-container>
+    -->
+   <!--<ng-container matColumnDef="1">
+      <th mat-header-cell *matHeaderCellDef  > <strong>1</strong> </th>
+      <td mat-cell *matCellDef="let element"> 
+        <mat-checkbox  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  color="primary" [value]="122" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="2">
+      <th mat-header-cell *matHeaderCellDef  > <strong>2</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="3">
+      <th mat-header-cell *matHeaderCellDef  > <strong>3</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="3" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="4">
+      <th mat-header-cell *matHeaderCellDef  > <strong>4</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="4" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="5">
+      <th mat-header-cell *matHeaderCellDef  > <strong>5</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="5" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="6">
+      <th mat-header-cell *matHeaderCellDef  > <strong>6</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="6" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="7">
+      <th mat-header-cell *matHeaderCellDef  > <strong>7</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="7" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="8">
+      <th mat-header-cell *matHeaderCellDef  > <strong>8</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="8" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="9">
+      <th mat-header-cell *matHeaderCellDef  > <strong>9</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="9" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="10">
+      <th mat-header-cell *matHeaderCellDef  > <strong>10</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="10" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="11">
+      <th mat-header-cell *matHeaderCellDef  > <strong>11</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="11" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="12">
+      <th mat-header-cell *matHeaderCellDef  > <strong>12</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="12" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="13">
+      <th mat-header-cell *matHeaderCellDef  > <strong>13</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="13" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="14">
+      <th mat-header-cell *matHeaderCellDef  > <strong>14</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="14" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="15">
+      <th mat-header-cell *matHeaderCellDef  > <strong>15</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="15" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="16">
+      <th mat-header-cell *matHeaderCellDef  > <strong>16</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="16" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="17">
+      <th mat-header-cell *matHeaderCellDef  > <strong>17</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="17" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="18">
+      <th mat-header-cell *matHeaderCellDef  > <strong>18</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="18" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="19">
+      <th mat-header-cell *matHeaderCellDef  > <strong>19</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="19" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="20">
+      <th mat-header-cell *matHeaderCellDef  > <strong>20</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="20" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="21">
+      <th mat-header-cell *matHeaderCellDef  > <strong>21</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="21" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="22">
+      <th mat-header-cell *matHeaderCellDef  > <strong>22</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="22" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="23">
+      <th mat-header-cell *matHeaderCellDef  > <strong>23</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="23" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="24">
+      <th mat-header-cell *matHeaderCellDef  > <strong>24</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="24" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="25">
+      <th mat-header-cell *matHeaderCellDef  > <strong>25</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="25" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="26">
+      <th mat-header-cell *matHeaderCellDef  > <strong>26</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="26" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="27">
+      <th mat-header-cell *matHeaderCellDef  > <strong>27</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="27" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="28">
+      <th mat-header-cell *matHeaderCellDef  > <strong>28</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="28" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="29">
+      <th mat-header-cell *matHeaderCellDef  > <strong>29</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="29" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="30">
+      <th mat-header-cell *matHeaderCellDef  > <strong>30</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  color="primary" [value]="30" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container> -->
+    <ng-container matColumnDef="1">
+      <th mat-header-cell *matHeaderCellDef  > <strong>1</strong> </th>
+      <td mat-cell *matCellDef="let element"> 
+        <mat-checkbox title="уважительная причина" class="cells"  color="primary" [value]="111" class="example-margin"></mat-checkbox>
+        <mat-checkbox title="неуважительная причина" color="primary" [value]="112" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="2">
+      <th mat-header-cell *matHeaderCellDef  > <strong>2</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox  title="уважительная причина" class="cells"  color="primary" [value]="113" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина"color="primary" [value]="114" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="3">
+      <th mat-header-cell *matHeaderCellDef  > <strong>3</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="4">
+      <th mat-header-cell *matHeaderCellDef  > <strong>4</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+    </ng-container>
+    <ng-container matColumnDef="5">
+      <th mat-header-cell *matHeaderCellDef  > <strong>5</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="6">
+      <th mat-header-cell *matHeaderCellDef  > <strong>6</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="7">
+      <th mat-header-cell *matHeaderCellDef  > <strong>7</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="8">
+      <th mat-header-cell *matHeaderCellDef  > <strong>8</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="9">
+      <th mat-header-cell *matHeaderCellDef  > <strong>9</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="10">
+      <th mat-header-cell *matHeaderCellDef  > <strong>10</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="11">
+      <th mat-header-cell *matHeaderCellDef  > <strong>11</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="12">
+      <th mat-header-cell *matHeaderCellDef  > <strong>12</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="13">
+      <th mat-header-cell *matHeaderCellDef  > <strong>13</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="14">
+      <th mat-header-cell *matHeaderCellDef  > <strong>14</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="15">
+      <th mat-header-cell *matHeaderCellDef  > <strong>15</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="16">
+      <th mat-header-cell *matHeaderCellDef  > <strong>16</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="17">
+      <th mat-header-cell *matHeaderCellDef  > <strong>17</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="18">
+      <th mat-header-cell *matHeaderCellDef  > <strong>18</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="19">
+      <th mat-header-cell *matHeaderCellDef  > <strong>19</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="20">
+      <th mat-header-cell *matHeaderCellDef  > <strong>20</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="21">
+      <th mat-header-cell *matHeaderCellDef  > <strong>21</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="22">
+      <th mat-header-cell *matHeaderCellDef  > <strong>22</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="23">
+      <th mat-header-cell *matHeaderCellDef  > <strong>23</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="24">
+      <th mat-header-cell *matHeaderCellDef  > <strong>24</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="25">
+      <th mat-header-cell *matHeaderCellDef  > <strong>25</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="26">
+      <th mat-header-cell *matHeaderCellDef  > <strong>26</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="27">
+      <th mat-header-cell *matHeaderCellDef  > <strong>27</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="28">
+      <th mat-header-cell *matHeaderCellDef  > <strong>28</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="29">
+      <th mat-header-cell *matHeaderCellDef  > <strong>29</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="30">
+      <th mat-header-cell *matHeaderCellDef  > <strong>30</strong> </th>
+      <td mat-cell *matCellDef="let element" > 
+        <mat-checkbox title="уважительная причина"  class="cells"  color="primary" [value]="1" class="example-margin"></mat-checkbox>
+        <mat-checkbox  title="неуважительная причина" color="primary" [value]="2" class="example-margin"></mat-checkbox>
+      </td>
+    </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  <div *ngIf="isLoading" class="spinner">
+    <mat-progress-spinner 
+      color="primary" 
+      mode="indeterminate">
+    </mat-progress-spinner>
+  </div>
+    <section>
+        <div class="example-button-row; buttons">
+          <button class="record" mat-raised-button color="primary">
+            Сохранить
+          </button>
+          &nbsp;&nbsp;
+          <button class="search" mat-raised-button color="primary" (click)="goBack()">
+            Назад
+          </button>
+        </div>
+        </section>
+</mat-card>
