@@ -7,8 +7,9 @@ import { ManagersComponent } from './managers/managers.component';
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
   { path: 'main', component: MainPageComponent },
-  { path: 'managers', component: ManagersComponent },
-  { path: 'employees', component: EmployeesComponent },
+  { path: 'managers/:idDepartment', component: ManagersComponent },
+ // { path: 'managers', component: ManagersComponent },
+  { path: 'employees/', component: EmployeesComponent },
   { path: "**",redirectTo:"/main"}
 ];
 

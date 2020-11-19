@@ -7,7 +7,7 @@ import { managers } from '../managers/managers.component';
 
 
 const getmanagers = '/api/getmanagers';
-
+const getmanagersByid = '/api/getmanagers';
 
 @Injectable({
   providedIn: 'root'
@@ -21,5 +21,11 @@ export class ManagersService {
     getManagers(): Observable<managers[]> {
       return this.http.get<managers[]>(getmanagers);
     }
+
+    getManager(idManager:number): Observable<managers> {
+      const url = `${getmanagersByid}/${idManager}`;
+      return this.http.get<managers>(url);
+    }
+
+  }
     
-}

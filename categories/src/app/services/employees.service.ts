@@ -6,6 +6,7 @@ import { Observable, of } from 'rxjs';
 import { employees } from '../managers/managers.component';
 
 const getemployees = '/api/getemployees';
+const getemployeesById = '/api/getemployees';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,12 @@ export class EmployeesService {
 
     getEmployees(): Observable<employees[]> {
       return this.http.get<employees[]>(getemployees);
+    }
+
+    getEmployee(idDepartment:number): Observable<employees[]> {
+    //  return this.http.get<employees[]>(`${getemployeesById}/${idDepartment}`)
+      const url = `${getemployeesById}/${idDepartment}`;
+      return this.http.get<employees[]>(url);
     }
     
 }
