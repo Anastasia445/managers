@@ -1,26 +1,27 @@
 <h1> Пропуски :</h1>
 <mat-dialog-content class="mat-typography">
-  <form [formGroup]="" (ngSubmit)="onSubmitChildren()">
+  <form  (ngSubmit)="onSubmitChildren()">
     <table>
-          <tr>
+      <tr>
+       <!--     <tr>
           <th>По уважительной причине</th>
-          <th>По неуважительной причине</th>
+      <th>По неуважительной причине</th>
           </tr>
       
-        <tr> 
+        <tr> -->
             <td align="center">
               <mat-form-field class="example-full-width">
-              <input matInput type="number" readonly>{{data.countt}}
+              <input matInput type="number" readonly>{{data.data1[1]}}
             </mat-form-field>
             </td>
 
-            <td align="center">
+     <!--     <td align="center">
               <mat-form-field class="example-full-width">
-              <input matInput type="number" readonly >{{data.countt2}}
+              <input matInput type="number" readonly >{{data.data2}}
               </mat-form-field>
             </td>
-        </tr>
-        
+        </tr> -->
+      </tr>
     </table>
     <mat-dialog-actions align="end">
       <button mat-button mat-dialog-close>Ок</button>
